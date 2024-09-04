@@ -8,5 +8,7 @@ Utilizando metodologías y herramientas actuales de la industria del software, b
 TBD
 
 ### Equipo de desarrollo
-
+Facundo Nesci
+facundonesci2007@gmail.com
+Colegio Santa Eufrasia
 
