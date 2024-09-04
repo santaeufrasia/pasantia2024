@@ -7,4 +7,6 @@ Utilizando metodologías y herramientas actuales de la industria del software, b
 
 TBD
 
+### Equipo de desarrollo
+
 
