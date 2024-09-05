@@ -5,7 +5,9 @@ Utilizando metodologías y herramientas actuales de la industria del software, b
 
 ## El proyecto
 
-TBD
+Este proyecto consiste en el desarrollo de un motor de búsqueda para juegos de arversarios en javascript.
+    
+    TBD more
 
 ### Equipo de desarrollo
 Facundo Nesci
