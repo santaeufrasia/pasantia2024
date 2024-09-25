@@ -14,3 +14,9 @@ Facundo Nesci
 facundonesci2007@gmail.com
 Colegio Santa Eufrasia
 
+
+
+Gastón Scilingo
+computacion@santaeufrasia.edu.ar
+Colegio Santa Eufrasia
+
