@@ -1,0 +1,141 @@
+Alumno@EQUIPO5 MINGW64 ~/Desktop
+$ cd documentos/
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos
+$ pwd
+/c/Users/Alumno/Desktop/documentos
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos
+$ git config --global user.name "Facundo Nesci"
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos
+$ git config --global user.email facundonesci2007@gmail.com
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos
+$ git clone https://github.com/santaeufrasia/pasantia2024.git
+Cloning into 'pasantia2024'...
+remote: Enumerating objects: 19, done.
+remote: Counting objects: 100% (19/19), done.
+remote: Compressing objects: 100% (15/15), done.
+remote: Total 19 (delta 4), reused 16 (delta 4), pack-reused 0 (from 0)
+Receiving objects: 100% (19/19), 14.47 KiB | 7.23 MiB/s, done.
+Resolving deltas: 100% (4/4), done.
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos
+$ git status
+fatal: not a git repository (or any of the parent directories): .git
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos
+$ ls
+pasantia2024/
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos
+$ cd pasantia2024/
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ git add README.md
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ git commit -m "datos del dasarrollador"
+[main 24057fb] datos del dasarrollador
+ 1 file changed, 2 insertions(+)
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ ls
+LICENSE  README.md
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ ls -la
+total 41
+drwxr-xr-x 1 Alumno 197121     0 Sep  4 11:23 ./
+drwxr-xr-x 1 Alumno 197121     0 Sep  4 11:23 ../
+drwxr-xr-x 1 Alumno 197121     0 Sep  4 11:27 .git/
+-rw-r--r-- 1 Alumno 197121 35823 Sep  4 11:23 LICENSE
+-rw-r--r-- 1 Alumno 197121   484 Sep  4 11:25 README.md
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ ls
+LICENSE  README.md
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ cd .git/
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024/.git (GIT_DIR!)
+$ ls -la
+total 18
+drwxr-xr-x 1 Alumno 197121   0 Sep  4 11:27 ./
+drwxr-xr-x 1 Alumno 197121   0 Sep  4 11:23 ../
+-rw-r--r-- 1 Alumno 197121  24 Sep  4 11:27 COMMIT_EDITMSG
+-rw-r--r-- 1 Alumno 197121  21 Sep  4 11:23 HEAD
+-rw-r--r-- 1 Alumno 197121 308 Sep  4 11:23 config
+-rw-r--r-- 1 Alumno 197121  73 Sep  4 11:23 description
+drwxr-xr-x 1 Alumno 197121   0 Sep  4 11:23 hooks/
+-rw-r--r-- 1 Alumno 197121 209 Sep  4 11:27 index
+drwxr-xr-x 1 Alumno 197121   0 Sep  4 11:23 info/
+drwxr-xr-x 1 Alumno 197121   0 Sep  4 11:23 logs/
+drwxr-xr-x 1 Alumno 197121   0 Sep  4 11:27 objects/
+-rw-r--r-- 1 Alumno 197121 112 Sep  4 11:23 packed-refs
+drwxr-xr-x 1 Alumno 197121   0 Sep  4 11:23 refs/
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024/.git (GIT_DIR!)
+$ cd ..
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ ls
+LICENSE  README.md
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 342 bytes | 342.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/santaeufrasia/pasantia2024.git
+   f81ee27..24057fb  main -> main
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ git add README.md
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ git commit -m "agregacion de datos personales"
+[main 40f62dc] agregacion de datos personales
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 378 bytes | 378.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/santaeufrasia/pasantia2024.git
+   24057fb..40f62dc  main -> main
+
+Alumno@EQUIPO5 MINGW64 ~/Desktop/documentos/pasantia2024 (main)
