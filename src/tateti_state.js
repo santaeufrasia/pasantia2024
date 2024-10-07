@@ -13,6 +13,15 @@ del tablero pasado como parametro
 */
 function getSuccessors(board, player){
   var result = new Array();
+for(i=1;i < board.length;i++){
+  board2 = clone(board)
+  board2[i]=player
+  result.push(board2)
+
+}
+
+
+
 
   // TODO: implementar solución...
 
@@ -26,10 +35,6 @@ function getSuccessors(board, player){
   
   return result;
 }
-
-
-
-
 
 
 
