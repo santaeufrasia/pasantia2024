@@ -65,4 +65,13 @@ function test(){
   }else{
     console.log("falló test");
   }
+
+  inicial = [0,1,0,0,0]
+  result = getSuccessors(inicial,2);
+  if (JSON.stringify(result) === JSON.stringify([[0,1,2,0,0],[0,1,0,2,0],[0,1,0,0,2]])){
+    console.log("pasó test");
+  }else{
+    console.log("falló test");
+  }
+
 }
