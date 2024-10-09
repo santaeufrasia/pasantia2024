@@ -12,12 +12,14 @@ Retorna un arreglo con los tableros (arreglos) sucesores inmediatos
 del tablero pasado como parametro
 */
 function getSuccessors(board, player){
-  var result = new Array();
-for(i=1;i < board.length;i++){
-  board2 = clone(board)
-  board2[i]=player
-  result.push(board2)
-
+   var result = new Array();
+ for(i=1;i < board.length;i++){
+  if(board[i] == 0){
+    board2 = clone(board)
+    board2[i] = player
+    result.push(board2)
+}
+else{console.log("el espacio " + i + " esta ocupado por " + board[i])}
 }
 
 
