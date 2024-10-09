@@ -22,7 +22,7 @@ function getSuccessors(board, player){
 else{console.log("el espacio " + i + " esta ocupado por " + board[i])}
 }
 
-
+console.log("git tosco")
 
 
   // TODO: implementar solución...
