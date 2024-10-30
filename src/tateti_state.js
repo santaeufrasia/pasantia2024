@@ -244,3 +244,18 @@ function testSuccessors() {
     console.log(successors);
   }
 }
+
+function testGetBest(){
+  state = getBest(getInicialState())
+  do{
+    console.log(state);
+    state = getBest(state);
+    console.log(state);
+  }while(!state.isEnd)
+}
+
+console.log("****** Test getSuccessors() ******");
+testSuccessors();
+console.log("****** Test getBest() ******");
+testGetBest();
+
