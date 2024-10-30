@@ -1,5 +1,7 @@
 
-
+/*
+Constructor del estado inicial
+*/
 function getInicialState(){
   return {
     tablero: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
