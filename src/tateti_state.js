@@ -21,39 +21,38 @@ function minMax(state) {
   }
   let resultMax = -1;
   let resultMin = +1;
-  let successors = getSuccessors(state);
+  //let successors = ... invocar a getSuccessors con state para obtener los sucesores
   for (var i = 0; i < successors.length; i++) {
     if (state.player === 1) {
-      resultMax = Math.max(resultMax, minMax(successors[i]));
+      // guardar en resultMax el maximo entre lo que tenga y la llamada recursiva
+      // a minMax con el i-esimo succesor. 
     } else {
-      resultMin = Math.min(resultMin, minMax(successors[i]));
+      // hacer lo propio para el caso de min
     }
   }
   return (state.player === 1) ? resultMax: resultMin;
 }
 
 /*
-Retorna el mejor estado siguiente para el jugador actual
+Retorna el mejor estado siguiente para el jugador actual.
 */
 function getBest(tatetiState){
+  /* Calcular los sucesores del estado tomado como parametro y valorarlos a todos
+  utilizanzo minmax, retornar el mejor de los sucesores para el jugador que le toque
+  (tatetiState.player)
+  */
   successors = getSuccessors(tatetiState);
   let best = null;
   if(tatetiState.player === 1){
     let bestVal = -1;
-    for(s of successors){
-      if (bestVal < minMax(s)){
-        bestVal = minMax(s);
-        best = s;
-      }
-    }
+    
+    // implementar un ciclo que recorra los sucesores,
+    // y obtenga el de mejor valor para retornar como best.
+  
   }else{
     let bestVal = 1;
-    for(s of successors){
-      if (bestVal > minMax(s)){
-        bestVal = minMax(s);
-        best = s;
-      }
-    }
+    // idem a lo anterior pero considerando que es turno de
+    // player 2 (el de menor valor posible)
   }
   return best;
 }
@@ -247,11 +246,11 @@ function testSuccessors() {
 
 function testGetBest(){
   state = getBest(getInicialState())
-  do{
+  while(!state.isEnd){
     console.log(state);
     state = getBest(state);
     console.log(state);
-  }while(!state.isEnd)
+  }
 }
 
 console.log("****** Test getSuccessors() ******");

@@ -1,9 +1,3 @@
-/*
-La función createCanvas() toma dos parametros (ancho y alto) y crea un lienzo para dibujar.
-La función background() asigna color de fondo al lienzo.
-La función line() toma cuatro parametros () y dibuja una linea de origen a fin.
-La función colorLinea() establece el color de la linea a dibujar.
-*/
 
 function iniciar(){
   dibujarTablero();
@@ -37,11 +31,15 @@ function jugar(){
     state.tablero[celda] = 1;
   }else{
     // play machine
-    state = getBest(state);
-    for (let i = 1; i <= 9; i++){
-      if(state.tablero[i] == 2)
+    /* 1) calcular el mejor estado para jugar 
+     2) dibujar la jugada a partir del nuevo estado, idea:
+      recorrer con un ciclo todo el tablero del estado y redibujar las posiciones (celdas)
+     que sean iguales a la ficha de la máquina (igual a 2) 
+    for (....){
+      if( ....  == 2)
         dibujarFichaEnCelda(circleImage,i);
     }
+    */
   }
   
   let ganador = verificarGanador(state.tablero);
