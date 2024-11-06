@@ -21,13 +21,16 @@ function minMax(state) {
   }
   let resultMax = -1;
   let resultMin = +1;
-  //let successors = ... invocar a getSuccessors con state para obtener los sucesores
+  let successors = getSuccessors(state)
   for (var i = 0; i < successors.length; i++) {
     if (state.player === 1) {
       // guardar en resultMax el maximo entre lo que tenga y la llamada recursiva
       // a minMax con el i-esimo succesor. 
+
+      resultMax = Math.max(resultMax, minMax(successors[i]))
+
     } else {
-      // hacer lo propio para el caso de min
+      resultMin = Math.min(resultMin, minMax(successors[i]))
     }
   }
   return (state.player === 1) ? resultMax: resultMin;
