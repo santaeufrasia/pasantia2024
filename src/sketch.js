@@ -30,16 +30,20 @@ function jugar(){
     state.player = 2;
     state.tablero[celda] = 1;
   }else{
-    // play machine
-    /* 1) calcular el mejor estado para jugar 
-     2) dibujar la jugada a partir del nuevo estado, idea:
+   // play machine
+    // 1) calcular el mejor estado para jugar
+    state = getBest(state)
+    console.log(state)
+     
+   /*  2) dibujar la jugada a partir del nuevo estado, idea:
       recorrer con un ciclo todo el tablero del estado y redibujar las posiciones (celdas)
-     que sean iguales a la ficha de la máquina (igual a 2) 
-    for (....){
-      if( ....  == 2)
+     que sean iguales a la ficha de la máquina (igual a 2) */
+    
+    for (var i = 0; i < state.tablero.length; i++){
+      if(state.tablero[i] == 2)
         dibujarFichaEnCelda(circleImage,i);
     }
-    */
+    
   }
   
   let ganador = verificarGanador(state.tablero);

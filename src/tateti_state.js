@@ -54,7 +54,7 @@ function getBest(tatetiState){
     // idem a lo anterior pero considerando que es turno de
     // player 2 (el de menor valor posible)
   }
-  return best;
+  return successors[0];
 }
 
 function getSuccessors(tatetiState) {
